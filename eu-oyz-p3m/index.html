@@ -406,7 +406,7 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 const sg=document.getElementById('sig');new IntersectionObserver(es=>es.forEach(e=>sg.classList.toggle('in',e.isIntersecting)),{threshold:.9}).observe(sg);
 const vd=document.getElementById('vid'),sb=document.getElementById('snd');
-if(vd){let vb=false;const lv=new IntersectionObserver(es=>{if(es[0].isIntersecting&&!vb){vb=true;lv.disconnect();fetch(vd.currentSrc||vd.src).then(r=>r.ok?r.blob():Promise.reject()).then(b=>{const t=vd.currentTime,pl=!vd.paused,m=vd.muted;vd.src=URL.createObjectURL(b);vd.muted=m;vd.addEventListener('loadedmetadata',()=>{try{vd.currentTime=t}catch(e){}if(pl)vd.play().catch(()=>{})},{once:true})}).catch(()=>{})}},{rootMargin:'900px 0px'});lv.observe(vd);}
+if(vd){let vb=false;const L=()=>{if(vb)return;vb=true;lv.disconnect();fetch(vd.currentSrc||vd.src).then(r=>r.ok?r.blob():Promise.reject()).then(b=>{const t=vd.currentTime,pl=!vd.paused,m=vd.muted;vd.src=URL.createObjectURL(b);vd.muted=m;vd.addEventListener('loadedmetadata',()=>{try{vd.currentTime=t}catch(e){}if(pl)vd.play().catch(()=>{})},{once:true})}).catch(()=>{vb=false})};const lv=new IntersectionObserver(es=>{if(es[0].isIntersecting)L()},{rootMargin:'900px 0px'});lv.observe(vd);vd.addEventListener('play',L);vd.addEventListener('pointerdown',L);}
 if(vd){const vo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(vd.muted)vd.play().catch(()=>{})}else vd.pause()}),{threshold:.5});vo.observe(vd);
 sb.onclick=()=>{vd.muted=false;vd.currentTime=0;vd.play().catch(()=>{});sb.classList.add('off')};
 vd.addEventListener('volumechange',()=>sb.classList.toggle('off',!vd.muted));}
