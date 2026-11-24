@@ -45,11 +45,11 @@ p{margin:0 0 .8em}
 .pol img{aspect-ratio:3/4;width:100%;object-fit:cover}
 .pol b{position:absolute;left:0;right:0;bottom:7px;text-align:center;font:700 12px/1 var(--t);text-transform:uppercase;letter-spacing:.12em;color:var(--ink)}
 .cbot{padding:0 max(5vw,18px) 26px;position:relative}
-.cover h1{font-size:clamp(60px,18vw,170px);line-height:.85;color:var(--pap)}
+.cover h1{font-size:clamp(60px,17vw,140px);line-height:.85;color:var(--pap)}
 .cover h1 em{font-style:normal;color:var(--bcn)}
-.cover .sub{margin-top:10px;font:500 18px/1.35 var(--t);max-width:30ch}
+.cover .sub{margin-top:24px;font:500 18px/1.35 var(--t);max-width:30ch}
 .cover .sub b{color:var(--bcn)}
-.cstamp{position:absolute;right:max(4vw,12px);top:-58px;z-index:6;width:clamp(92px,24vw,140px);transform:rotate(-14deg)}
+.cstamp{position:absolute;right:max(4vw,12px);top:calc(-1 * clamp(104px,27vw,150px));z-index:6;width:clamp(92px,24vw,140px);transform:rotate(-14deg)}
 
 /* pase de abordar */
 .pass{margin:-1px 0 0;padding:44px 0 10px;background:var(--pap)}
@@ -80,7 +80,7 @@ p{margin:0 0 .8em}
 /* tira de timbres */
 .strip{padding:30px 0 40px}
 .strip h2{font-size:clamp(30px,8vw,48px)}
-.stamps{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 0 10px;scrollbar-width:none;overscroll-behavior-x:contain}
+.stamps{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 0 22px;scrollbar-width:none;overscroll-behavior-x:contain}
 .stamps::-webkit-scrollbar{display:none}
 .stamps a{flex:0 0 calc(50% - 4px);scroll-snap-align:start;scroll-snap-stop:always;text-decoration:none;color:inherit;text-align:center}
 @media (min-width:560px){.stamps a{flex-basis:calc(33.333% - 6px)}}
@@ -200,7 +200,7 @@ p{margin:0 0 .8em}
 @media (prefers-reduced-motion:reduce){.sig b,.sig span{opacity:1;transform:none;transition:none}}
 html{overflow-x:clip}
 html,body{max-width:100%}
-.sw{position:relative;padding:0 46px}
+.sw{position:relative;padding:0 46px}.sw.rv{transform:translateY(26px)}.sw.rv.in{transform:none}
 .sw:after{content:none}
 .sw.end:after{opacity:0}
 .sa{position:absolute;top:76px;transform:translateY(-50%);z-index:2;width:48px;height:48px;border-radius:50%;border:0;background:var(--ink);color:var(--pap);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 16px rgba(31,29,54,.3);transition:opacity .25s,transform .2s}
@@ -269,7 +269,7 @@ html,body{max-width:100%}
   <p class="rv">Elegí cada alojamiento pensando en ustedes cinco: bien ubicados, con buenas opiniones y con espacio para viajar cómodos entre adultos.</p>
   <div class="duo">
    <div class="rv" style="--r:-1deg;background:var(--par)"><h3>Los papás, que vuelven</h3><p>En cada ciudad les dejo rincones que no salen en las guías, para descubrir Europa otra vez.</p></div>
-   <div class="rv" style="--r:1.2deg;background:var(--mad)"><h3>Los chicos, que estrenan</h3><p>Su primera vez en Europa. Hoteles cerca de lo imperdible: salen a la calle y ya están en el viaje.</p></div>
+   <div class="rv" style="--r:1.2deg;background:var(--mad)"><h3>Los hijos, que estrenan</h3><p>Su primera vez en Europa. Hoteles cerca de lo imperdible: salen a la calle y ya están en el viaje.</p></div>
   </div>
  </div>
 </section>
@@ -278,7 +278,7 @@ html,body{max-width:100%}
  <div class="wrap">
   <h2 class="rv">Su pasaporte</h2>
   <p class="via rv">Un timbre por ciudad. Toquen uno para ir directo.</p>
-  <div class="sw"><button class="sa l" id="sl" aria-label="Timbres anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="stamps" id="stamps"></div><button class="sa r" id="sr" aria-label="Más timbres"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+  <div class="sw rv"><button class="sa l" id="sl" aria-label="Timbres anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="stamps" id="stamps"></div><button class="sa r" id="sr" aria-label="Más timbres"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   <p class="via">Lunes 15: Roma → Madrid · martes 16: vuelta a Chile.</p>
  </div>
 </section>
@@ -345,7 +345,7 @@ const C=[
    room:'Dos habitaciones: una doble y una triple. En París las triples son compactas: la tercera cama puede ser cama extra o sofá cama.'},
   must:[['i-par-1','Torre Eiffel','El símbolo de París. La mejor vista para la foto es desde el Trocadero, y de noche brilla cada hora.'],['i-par-2','Museo del Louvre','La pirámide de vidrio y adentro la Mona Lisa. Vale la pena verlo también de noche, iluminado.']],
   spots:[['s07-vivienne','Galerie Vivienne','Un pasaje cubierto de 1823, con techo de vidrio, mosaicos y librerías antiguas.'],
-         ['s08-cremieux','Rue Crémieux','Una calle peatonal de casitas pintadas de colores. La foto que los chicos van a querer subir.']]},
+         ['s08-cremieux','Rue Crémieux','Una calle peatonal de casitas pintadas de colores. La foto que los hijos van a querer subir.']]},
  {id:'florencia',n:'Florencia',c:'--flo',img:'florencia',d:'10–12 FEB',dates:'10 al 12 de febrero',nights:2,from:'Viajan de París a Florencia el miércoles 10.',price:850,
   hotel:{name:'NH Firenze',zone:'Santa Maria Novella · junto al río Arno',pics:[['flo-1','Azotea con vista al Duomo'],['flo-2','Habitación doble'],['flo-3','Habitación triple'],['flo-4','Baño'],['flo-5','Desayuno buffet'],['flo-6','Restaurante'],['flo-7','Recepción']],
    feats:['Desayuno incluido','Azotea con vista al Duomo','Habitaciones amplias','Restaurante toscano','Ponte Vecchio a 20 min a pie'],
@@ -373,7 +373,7 @@ fan.innerHTML=C.map((c,i)=>`<div class="pol" style="--r:${pos[i][0]};--x:${pos[i
 const pols=[...fan.children];
 pols.forEach((p,i)=>p.addEventListener('click',()=>{pols.forEach(q=>q.style.zIndex=q===p?9:'');}));
 
-document.getElementById('stamps').innerHTML=C.map((c,i)=>`<a href="#${c.id}" class="rv" style="--r:${[-8,6,-4,9,-6][i]}deg"><svg viewBox="0 0 200 200" aria-hidden="true">${stamp(c.n.toUpperCase(),c.d,c.nights+' NOCHES',col(c.c))}</svg><small>${c.n}</small></a>`).join('');
+document.getElementById('stamps').innerHTML=C.map((c,i)=>`<a href="#${c.id}" style="--r:${[-8,6,-4,9,-6][i]}deg"><svg viewBox="0 0 200 200" aria-hidden="true">${stamp(c.n.toUpperCase(),c.d,c.nights+' NOCHES',col(c.c))}</svg><small>${c.n}</small></a>`).join('');
 
 const stp=document.getElementById('stamps'),sl=document.getElementById('sl'),sr=document.getElementById('sr'),sw=stp.parentNode;
 const stu=()=>{const m=stp.scrollWidth-stp.clientWidth-4;sl.hidden=stp.scrollLeft<=4;sr.hidden=stp.scrollLeft>=m;sw.classList.toggle('end',stp.scrollLeft>=m)};
