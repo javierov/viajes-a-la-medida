@@ -109,7 +109,7 @@ p{margin:0 0 .8em}
 .nb svg{width:18px;height:18px}
 .nb.l{left:10px}.nb.r{right:10px}
 .nb:focus-visible,.gal:focus-visible{outline:3px solid var(--c);outline-offset:2px}
-.cnt{position:absolute;right:10px;bottom:10px;background:var(--ink);color:#fff;font:700 12px/1 var(--t);padding:6px 8px}
+.cnt{position:absolute;right:10px;top:10px;background:var(--ink);color:#fff;font:700 12px/1 var(--t);padding:6px 8px}
 .sb{padding:20px 20px 22px}
 .sb .tag{background:var(--c)}
 .sb h3{font-size:clamp(26px,6.5vw,34px);margin-top:12px}
@@ -219,6 +219,10 @@ html,body{max-width:100%}
 .fxr span{font-weight:500}
 .fxr strong{font:400 22px/1 var(--h);white-space:nowrap}
 .fxr em{font-style:normal;font-size:14px;opacity:.75;white-space:nowrap;text-align:right;min-width:9ch}
+.gf{flex:0 0 100%;margin:0;position:relative;scroll-snap-align:start}
+.gf img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gf figcaption{position:absolute;left:10px;bottom:10px;background:rgba(31,29,54,.82);color:#fff;font:700 13px/1 var(--t);padding:7px 10px}
+@media (min-width:760px){.stay .gf{height:100%}.stay .gf img{aspect-ratio:auto;height:100%}}
 </style>
 </head>
 <body>
@@ -300,7 +304,7 @@ html,body{max-width:100%}
  </div>
 </section>
 
-<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-europa-30s-v4.mp4" poster="img/poster-europa-v4.jpg" muted playsinline loop preload="metadata" controls></video><b>Europa en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
+<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-europa-30s-v7.mp4" poster="img/poster-europa-v7.jpg" muted playsinline loop preload="metadata" controls></video><b>Europa en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
 
 <section class="end">
  <div class="wrap">
@@ -310,37 +314,42 @@ html,body{max-width:100%}
   <div class="sig" id="sig"><b>Catalina Rozas</b><span>Asesora de viajes a la medida · +56 9 7376 4358</span></div>
  </div>
 </section>
-<footer class="foot">Fotos de rincones: Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_del_Pr%C3%ADncipe_de_Anglona_Madrid.jpg">Anglona</a>, <a href="https://commons.wikimedia.org/wiki/File:Madrid_-_Museo-Palacio_Cerralbo,_interior_04.jpg">Cerralbo</a>, <a href="https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Sant_Felip_Neri.jpg">Sant Felip Neri</a>, <a href="https://commons.wikimedia.org/wiki/File:2014-_Hospital_Sant_Pau,_Barcelona,_Spain_(_Ank_Kumar_)_03.jpg">Sant Pau</a>, <a href="https://commons.wikimedia.org/wiki/File:Galerie_Vivienne,_12_March_2015.jpg">Vivienne</a>, <a href="https://commons.wikimedia.org/wiki/File:Rue_Cr%C3%A9mieux,_Paris_12.jpg">Crémieux</a>, <a href="https://commons.wikimedia.org/wiki/File:Via_Santo_Spirito_9,_palazzo,_buchetta_del_vino_sotto_finestra_01.jpg">Buchetta</a>, <a href="https://commons.wikimedia.org/wiki/File:Firenze_Basilica_di_San_Miniato_al_Monte_Esterno_Facciata_7.jpg">San Miniato</a>, <a href="https://commons.wikimedia.org/wiki/File:Knights_of_Malta_Keyhole,_Aventine_Hill,_Rome_(Unsplash).jpg">Aventino</a>, <a href="https://commons.wikimedia.org/wiki/File:20110327_Roma_-_Gianicolo_006.jpg">Gianicolo</a>). Fotos de hoteles: de cada alojamiento.</footer>
+<footer class="foot">Fotos de rincones: Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_del_Pr%C3%ADncipe_de_Anglona_Madrid.jpg">Anglona</a>, <a href="https://commons.wikimedia.org/wiki/File:Madrid_-_Museo-Palacio_Cerralbo,_interior_04.jpg">Cerralbo</a>, <a href="https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Sant_Felip_Neri.jpg">Sant Felip Neri</a>, <a href="https://commons.wikimedia.org/wiki/File:2014-_Hospital_Sant_Pau,_Barcelona,_Spain_(_Ank_Kumar_)_03.jpg">Sant Pau</a>, <a href="https://commons.wikimedia.org/wiki/File:Galerie_Vivienne,_12_March_2015.jpg">Vivienne</a>, <a href="https://commons.wikimedia.org/wiki/File:Rue_Cr%C3%A9mieux,_Paris_12.jpg">Crémieux</a>, <a href="https://commons.wikimedia.org/wiki/File:Via_Santo_Spirito_9,_palazzo,_buchetta_del_vino_sotto_finestra_01.jpg">Buchetta</a>, <a href="https://commons.wikimedia.org/wiki/File:Firenze_Basilica_di_San_Miniato_al_Monte_Esterno_Facciata_7.jpg">San Miniato</a>, <a href="https://commons.wikimedia.org/wiki/File:Knights_of_Malta_Keyhole,_Aventine_Hill,_Rome_(Unsplash).jpg">Aventino</a>, <a href="https://commons.wikimedia.org/wiki/File:20110327_Roma_-_Gianicolo_006.jpg">Gianicolo</a>). Fotos de hoteles: de cada alojamiento. Imperdibles: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Royal_Palace_of_Madrid_02.jpg">Palacio Real</a> (Bernard Gagnon, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Plaza_Mayor_de_Madrid_-_01.jpg">Plaza Mayor</a> (Carlos Delgado, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Sagrada_Familia_March_2015-10a.jpg">Sagrada Familia</a> (Alvesgaspar, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Barcelona_Parc_G%C3%BCell_el_drac.jpg">Park Güell</a> (Isiwal, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Eiffel_tower_from_trocadero.jpg">Torre Eiffel</a> (NonOmnisMoriar, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg">Louvre</a> (Benh Lieu Song, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Florence_Cathedral_seen_from_Piazzale_Michelangelo_night_dllu.jpg">Duomo</a> (Dllu, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_at_dusk_1.JPG">Ponte Vecchio</a> (Martin Falbisoner, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome_(7).jpg">Coliseo</a> (Tournasol7, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg">Plaza de San Pedro</a> (Diliff, CC BY-SA 3.0).</footer>
 
 <script>
 {
 const C=[
  {id:'madrid',n:'Madrid',c:'--mad',img:'madrid',d:'2–4 FEB',dates:'2 al 4 de febrero',nights:2,from:'Llegan el martes 2 a las 16:30. Dos noches para acostumbrarse a la hora.',
   own:{t:'Su Airbnb',p:'En Madrid se quedan en el departamento que ustedes ya tienen. Base perfecta para empezar sin apuro.'},
+  must:[['i-mad-1','Palacio Real','La residencia oficial de los reyes de España, con más de 3.000 salas. Por dentro es tan impresionante como por fuera.'],['i-mad-2','Plaza Mayor','El corazón del Madrid antiguo, rodeada de soportales y balcones. Ideal para un bocadillo de calamares.']],
   spots:[['s02-anglona','Jardín del Príncipe de Anglona','Un jardín escondido detrás de un muro en el Madrid de los Austrias. Pocos madrileños lo conocen.'],
          ['s03-cerralbo','Museo Cerralbo','Un palacio del siglo XIX que sigue amueblado como cuando vivía su dueño: salones, espejos y salón de baile.']]},
  {id:'barcelona',n:'Barcelona',c:'--bcn',img:'barcelona',d:'4–7 FEB',dates:'4 al 7 de febrero',nights:3,from:'Salen de Madrid a las 16:32 y llegan a las 19:34.',price:1498,
-  hotel:{name:'Cosmo Apartments Passeig de Gràcia',zone:'Eixample · a pasos del Paseo de Gracia',pics:['bcn-3','bcn-2','bcn-1'],
+  hotel:{name:'Cosmo Apartments Passeig de Gràcia',zone:'Eixample · a pasos del Paseo de Gracia',pics:[['bcn-1','Fachada en el Eixample'],['bcn-2','Living del dúplex'],['bcn-3','Dormitorio'],['bcn-4','Cocina equipada'],['bcn-5','Baño'],['bcn-6','Terraza privada'],['bcn-7','Terraza']],
    feats:['Dúplex para los cinco','Terraza','A 50 m del Paseo de Gracia','Casa Batlló a 5 min a pie','Cocina equipada','Metro a 300 m'],
    room:'Un solo departamento para toda la familia, con dormitorios y sofá cama.'},
+  must:[['i-bcn-1','Sagrada Familia','La obra maestra de Gaudí, todavía en construcción. Por dentro, la luz de los vitrales parece un bosque de colores.'],['i-bcn-2','Park Güell','El parque de Gaudí con su famoso dragón de mosaico y vista a toda la ciudad.']],
   spots:[['s04-felip-neri','Plaça de Sant Felip Neri','Una placita silenciosa en pleno Barrio Gótico, con una fuente y una historia que se lee en sus muros.'],
          ['s05-sant-pau','Recinto Modernista de Sant Pau','Pabellones de cerámica y jardines, con mucha menos gente que la Sagrada Familia.']]},
  {id:'paris',n:'París',c:'--par',img:'paris',d:'7–10 FEB',dates:'7 al 10 de febrero',nights:3,from:'Llegan a París el domingo 7 a las 22:08.',price:1272,
-  hotel:{name:'Hôtel De La Paix',zone:'Distrito 15 · barrio tranquilo y residencial',pics:['par-2','par-1','par-3'],
+  hotel:{name:'Hôtel De La Paix',zone:'Distrito 15 · barrio tranquilo y residencial',pics:[['par-1','Fachada'],['par-2','Habitación triple'],['par-3','Habitación doble'],['par-4','Baño'],['par-5','Desayuno buffet'],['par-6','Desayuno incluido'],['par-7','Recepción']],
    feats:['Desayuno incluido','Edificio parisino clásico','A 2,5 km de la Torre Eiffel','Recepción con chimenea','Patio para desayunar'],
    room:'Dos habitaciones: una doble y una triple. En París las triples son compactas: la tercera cama puede ser cama extra o sofá cama.'},
+  must:[['i-par-1','Torre Eiffel','El símbolo de París. La mejor vista para la foto es desde el Trocadero, y de noche brilla cada hora.'],['i-par-2','Museo del Louvre','La pirámide de vidrio y adentro la Mona Lisa. Vale la pena verlo también de noche, iluminado.']],
   spots:[['s07-vivienne','Galerie Vivienne','Un pasaje cubierto de 1823, con techo de vidrio, mosaicos y librerías antiguas.'],
          ['s08-cremieux','Rue Crémieux','Una calle peatonal de casitas pintadas de colores. La foto que los chicos van a querer subir.']]},
  {id:'florencia',n:'Florencia',c:'--flo',img:'florencia',d:'10–12 FEB',dates:'10 al 12 de febrero',nights:2,from:'Viajan de París a Florencia el miércoles 10.',price:850,
-  hotel:{name:'NH Firenze',zone:'Santa Maria Novella · junto al río Arno',pics:['flo-1','flo-3','flo-2'],
+  hotel:{name:'NH Firenze',zone:'Santa Maria Novella · junto al río Arno',pics:[['flo-1','Azotea con vista al Duomo'],['flo-2','Habitación doble'],['flo-3','Habitación triple'],['flo-4','Baño'],['flo-5','Desayuno buffet'],['flo-6','Restaurante'],['flo-7','Recepción']],
    feats:['Desayuno incluido','Azotea con vista al Duomo','Habitaciones amplias','Restaurante toscano','Ponte Vecchio a 20 min a pie'],
    room:'Dos habitaciones: una doble y una triple.'},
+  must:[['i-flo-1','El Duomo','La catedral de Santa María del Fiore y su cúpula de Brunelleschi, que domina toda la ciudad.'],['i-flo-2','Ponte Vecchio','El puente más antiguo de Florencia, con joyerías colgando sobre el río Arno. Precioso al atardecer.']],
   spots:[['s10-buchette','Las buchette del vino','Ventanitas en las fachadas por donde los palacios vendían vino. Algunas todavía funcionan.'],
          ['s11-san-miniato','San Miniato al Monte','La mejor vista de Florencia, con mucha menos gente que el Piazzale Michelangelo.']]},
  {id:'roma',n:'Roma',c:'--rom',img:'roma',d:'12–15 FEB',dates:'12 al 15 de febrero',nights:3,from:'De Florencia a Roma el viernes 12.',price:1825,
-  hotel:{name:'Al Manthia Hotel',zone:'Trevi · en pleno centro histórico',pics:['rom-1','rom-2','rom-3'],
+  hotel:{name:'Al Manthia Hotel',zone:'Trevi · en pleno centro histórico',pics:[['rom-1','Fachada'],['rom-2','Habitación'],['rom-3','Habitación doble'],['rom-4','Habitación'],['rom-5','Baño'],['rom-6','Sala de desayuno']],
    feats:['Desayuno incluido','Edificio del siglo XIX','Fontana di Trevi a 5 min','Cerca de la Plaza de España','Metro Barberini a 100 m'],
    room:'Dos habitaciones: una doble y una triple.'},
+  must:[['i-rom-1','El Coliseo','El anfiteatro más grande del Imperio romano, junto al Foro. Entrar es como viajar 2.000 años atrás.'],['i-rom-2','Plaza de San Pedro','La gran plaza del Vaticano, abrazada por la columnata de Bernini, frente a la basílica de San Pedro.']],
   spots:[['s12-cerradura','La cerradura del Aventino','Se mira por el ojo de una cerradura y aparece la cúpula de San Pedro, perfectamente enmarcada.'],
          ['s13-gianicolo','Mirador del Gianicolo','Roma entera a sus pies al atardecer. Un final de viaje inolvidable.']]}
 ];
@@ -365,7 +374,7 @@ sl.onclick=()=>stp.scrollBy({left:-step()*2,behavior:'smooth'});
 sr.onclick=()=>stp.scrollBy({left:step()*2,behavior:'smooth'});
 stp.addEventListener('scroll',stu,{passive:true});addEventListener('resize',stu);stu();
 const arrow=d=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d?'M9 4l8 8-8 8':'M15 4l-8 8 8 8'}" fill="none" stroke="currentColor" stroke-width="3"/></svg>`;
-const gal=p=>`<div class="gw"><div class="gal" tabindex="0" aria-label="Fotos del alojamiento">${p.map((x,i)=>`<img src="img/h-${x}.jpg" alt="Foto ${i+1} del alojamiento" loading="lazy">`).join('')}</div><button class="nb l" aria-label="Foto anterior">${arrow(0)}</button><button class="nb r" aria-label="Foto siguiente">${arrow(1)}</button><span class="cnt">1 / ${p.length}</span></div>`;
+const gal=p=>`<div class="gw"><div class="gal" tabindex="0" aria-label="Fotos del alojamiento">${p.map((x,i)=>`<figure class="gf"><img src="img/h2-${x[0]}.jpg" alt="${x[1]}" loading="lazy"><figcaption>${x[1]}</figcaption></figure>`).join('')}</div><button class="nb l" aria-label="Foto anterior">${arrow(0)}</button><button class="nb r" aria-label="Foto siguiente">${arrow(1)}</button><span class="cnt">1 / ${p.length}</span></div>`;
 document.getElementById('chapters').innerHTML=C.map((c,i)=>`
 <section class="city" id="${c.id}" style="--c:var(${c.c})">
  <div class="band"><div class="wrap"><div class="no">Timbre ${i+1} de 5 · ${c.nights} noches</div><h2>${c.n}</h2><p class="when">${c.dates}. ${c.from}</p></div></div>
@@ -373,6 +382,7 @@ document.getElementById('chapters').innerHTML=C.map((c,i)=>`
   <figure class="card rv" style="margin:0"><img src="img/c-${c.img}.jpg" alt="${c.n}" loading="lazy"><figcaption class="cap"><span>Saludos desde ${c.n}</span><i>${c.d}</i></figcaption></figure>
   ${c.hotel?`<article class="stay rv">${gal(c.hotel.pics)}<div class="sb"><span class="tag">Su casa en ${c.n}</span><h3>${c.hotel.name}</h3><div class="zone">${c.hotel.zone}</div><div class="chips">${c.hotel.feats.map(f=>`<span>${f}</span>`).join('')}</div><div class="room">${c.hotel.room}</div></div></article>`
   :`<div class="own rv"><span class="tag">Su casa en ${c.n}</span><h3>${c.own.t}</h3><p>${c.own.p}</p></div>`}
+  <div class="corners"><h3 class="rv">Imperdibles</h3><p class="rv">Lo que no se pueden perder en su primera vez.</p><div class="pols">${c.must.map((s,k)=>`<div class="pc rv" style="--r:${k?-1.4:1.6}deg"><img src="img/${s[0]}.jpg" alt="${s[1]}" loading="lazy"><b>${s[1]}</b><p>${s[2]}</p></div>`).join('')}</div></div>
   <div class="corners"><h3 class="rv">Rincones secretos</h3><p class="rv">Fuera del circuito de siempre.</p><div class="pols">${c.spots.map((s,k)=>`<div class="pc rv" style="--r:${k?1.6:-1.8}deg"><img src="img/${s[0]}.jpg" alt="${s[1]}" loading="lazy"><b>${s[1]}</b><p>${s[2]}</p></div>`).join('')}</div></div>
  </div>
 </section>`).join('');
