@@ -361,6 +361,29 @@ html,body{max-width:100%}
 .dims{display:flex;justify-content:center;gap:clamp(10px,4vw,28px);width:100%;border-top:1px solid #e6e0d4;padding-top:10px}
 .dims span{font:500 15px/1.2 var(--t);color:var(--ink);text-align:center;white-space:nowrap}
 .dims b{display:block;font:700 11px/1.2 var(--t);letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:3px}
+.strip .fin{text-align:center;max-width:34ch;margin:14px auto 0;text-wrap:balance}
+.stamps a small{text-wrap:balance}
+@media (max-width:520px){
+ .tk .row>div:first-child{grid-column:1/-1}
+ .tk .row strong{font-size:19px;white-space:nowrap}
+ .rt div{grid-template-columns:60px minmax(0,1fr) auto;padding:12px 14px}
+}
+@media (max-width:520px){
+ .tk .row>div:nth-child(2){grid-column:1/-1}
+ .tk .row>div:nth-child(n+3) strong{font-size:17px}
+ .tk .tag{font-size:11px}
+ .rt b{font-size:15px}.rt span{font-size:13px}
+}
+.card .cap i{white-space:nowrap}
+@media (max-width:899px){
+
+ .cover.sea .sub{margin-top:14px;font-size:17px}
+ .kick{margin-bottom:8px}
+ .hero{margin-top:-72px}
+ .hero img{height:clamp(250px,68vw,330px);object-position:30% 72%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
+ .pstrip{margin-top:-62px;padding-bottom:18px}
+ .sp{width:clamp(70px,20vw,120px);padding:5px 5px 22px}
+}
 </style>
 </head>
 <body>
@@ -411,7 +434,7 @@ html,body{max-width:100%}
   <h2 class="rv">Su pasaporte</h2>
   <p class="via rv">Un timbre por parada. Toquen uno para ir directo.</p>
   <div class="sw rv"><button class="sa l" id="sl" aria-label="Timbres anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="stamps" id="stamps"></div><button class="sa r" id="sr" aria-label="Más timbres"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-  <p class="via">Lunes 15: desembarcan en Los Ángeles a las 07:00 y vuelan a Santiago a las 13:55.</p>
+  <p class="via fin">Lunes 15: desembarcan en Los Ángeles a las 07:00 y vuelan a Santiago a las 13:55.</p>
  </div>
 </section>
 
@@ -451,7 +474,7 @@ html,body{max-width:100%}
 <section class="city" id="crucero" style="--c:var(--sea)">
  <div class="band"><div class="wrap"><div class="no">Parada 2 · 7 noches en el mar</div><h2>Crucero</h2><p class="when">8 al 15 de febrero a bordo del Voyager of the Seas, de Royal Caribbean. Ida y vuelta desde Los Ángeles.</p></div></div>
  <div class="post"><svg class="bst slam" id="bst-sea" viewBox="0 0 200 200" aria-hidden="true"></svg>
-  <figure class="card rv" style="margin:0"><img src="img/i-ship-2.jpg" alt="Voyager of the Seas" loading="lazy" style="aspect-ratio:3/2"><figcaption class="cap"><span>Saludos desde el Voyager</span><i>8–15 FEB</i></figcaption></figure>
+  <figure class="card rv" style="margin:0"><img src="img/i-ship-3.jpg" alt="Voyager of the Seas" loading="lazy" style="aspect-ratio:3/2"><figcaption class="cap"><span>Saludos desde el Voyager</span><i>8–15 FEB</i></figcaption></figure>
 
   <article class="stay rv"><div class="gw"><div class="gal" tabindex="0" aria-label="Fotos de los camarotes" id="galC"></div><button class="nb l" aria-label="Foto anterior"></button><button class="nb r" aria-label="Foto siguiente"></button><span class="cnt"></span></div><div class="th" aria-label="Miniaturas" id="thC"></div><div class="sb"><span class="tag">Su casa en el mar</span><h3>Dos camarotes con ventana</h3><div class="zone">Voyager of the Seas · Royal Caribbean</div><div class="chips"><span>Vista al mar garantizada</span><span>Cama Royal King (se separa en dos)</span><span>Triple de 19,6 m² con sofá cama</span><span>Doble de 14,9 m²</span><span>Limpieza diaria</span></div><div class="room">Un camarote doble y uno triple más espacioso, en la cubierta 8. Los dos con vista al océano.</div></div></article>
 
