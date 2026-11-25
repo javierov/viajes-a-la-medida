@@ -404,6 +404,21 @@ html,body{max-width:100%}
 .mn{margin:0;padding:12px 20px 16px;font-size:14.5px;color:var(--mut);border-top:1px solid #eee5d6}
 .note+.mi{margin-top:22px}
 @media (max-width:520px){.mr{flex-direction:column;align-items:flex-start;gap:2px}}
+/* timbres como botones */
+.sw{padding:0 34px}
+.sa{width:42px;height:42px;top:50%}
+.sa.l{left:-8px}.sa.r{right:-8px}
+.stamps{gap:12px;padding:14px 4px 18px}
+.stamps a{flex:0 0 calc(50% - 6px);background:#fff;border-radius:18px;padding:14px 8px 12px;box-shadow:0 6px 16px rgba(31,29,54,.12),0 0 0 1px rgba(31,29,54,.06);transition:transform .15s,box-shadow .15s}
+.stamps a:active{transform:scale(.96);box-shadow:0 2px 6px rgba(31,29,54,.15)}
+@media (hover:hover){.stamps a:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(31,29,54,.18)}}
+.stamps a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.stamps a svg{width:min(150px,100%)}
+.stamps a small{font-size:14px;margin-top:8px}
+.stamps a small:after{content:"Ver ›";display:block;margin:8px auto 0;width:max-content;font:700 12px/1 var(--t);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--ink);padding:7px 12px;border-radius:99px}
+@media (min-width:560px){.stamps a{flex-basis:calc(33.333% - 8px)}}
+@media (min-width:860px){.stamps a{flex-basis:calc(20% - 10px)}}
+.stamps a small{white-space:nowrap}@media (max-width:400px){.stamps a small{font-size:12.5px}}
 </style>
 </head>
 <body>
@@ -567,7 +582,7 @@ html,body{max-width:100%}
  </div>
 </section>
 
-<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-la-30s-v4.mp4" poster="img/poster-la-v3.jpg" muted playsinline loop preload="metadata" controls></video><b>California y México en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
+<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-la-30s-v5.mp4" poster="img/poster-la-v3.jpg" muted playsinline loop preload="metadata" controls></video><b>California y México en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
 
 
 <section class="end">
@@ -578,7 +593,7 @@ html,body{max-width:100%}
   <div class="sig" id="sig"><b>Catalina Rozas</b><span>Asesora de viajes a la medida · +56 9 7376 4358</span></div>
  </div>
 </section>
-<footer class="foot">Fotos del hotel: del alojamiento. SUV: imagen referencial del modelo. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg">Walt Disney Concert Hall</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Glatter-G%C3%B6tz_Organ_at_the_Walt_Disney_Concert_Hall_-_Los_Angeles.jpg">interior del Disney Hall</a> (cultivar413, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Grauman%27s_Chinese_Theatre,_by_Carol_Highsmith_fixed_%26_straightened.jpg">Teatro Chino</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg">Letrero de Hollywood</a> (Thomas Wolf, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_at_Port_of_Kobe.jpg">Voyager of the Seas</a> (0-0t, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
+<footer class="foot">Fotos del hotel: del alojamiento. SUV: imagen referencial del modelo. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg">Walt Disney Concert Hall</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Glatter-G%C3%B6tz_Organ_at_the_Walt_Disney_Concert_Hall_-_Los_Angeles.jpg">interior del Disney Hall</a> (cultivar413, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_at_Port_of_Kobe.jpg">Voyager of the Seas</a> (0-0t, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
 
 <script>
 {
@@ -609,7 +624,7 @@ fill(document.getElementById('galH'),document.getElementById('thH'),[['h-1','Fac
 fill(document.getElementById('galC'),document.getElementById('thC'),[['c-1','Camarote doble con vista al mar'],['c-2','Camarote triple, espacioso con vista al mar']]);
 document.querySelectorAll('.nb.l').forEach(b=>b.innerHTML=arrow(0));document.querySelectorAll('.nb.r').forEach(b=>b.innerHTML=arrow(1));
 
-const M=[['i-r66','El fin de la Ruta 66','En el muelle de Santa Mónica termina la ruta más famosa de Estados Unidos. La foto con el letrero es obligada.'],['i-wdch-1','Walt Disney Concert Hall','La obra de Frank Gehry en el centro de Los Ángeles: curvas de acero que brillan con el sol. Se puede recorrer por fuera y subir a su jardín en la terraza.'],['i-wdch-2','Por dentro, el Disney Hall','La sala de conciertos de la Filarmónica de Los Ángeles, toda en madera, con su famoso órgano. Hay visitas guiadas y audioguía.'],['i-getty','Getty Center','Arte, arquitectura blanca de Richard Meier y jardines con vista a toda la ciudad. La entrada es gratis, con hora reservada.'],['i-chinese','El Teatro Chino','Las huellas de las estrellas en el cemento, y afuera el Paseo de la Fama.'],['i-rodeo','Rodeo Drive','La calle más famosa de Beverly Hills, para caminar y mirar vitrinas.'],['i-sign','El letrero de Hollywood','En lo alto de las colinas: la foto obligada del viaje.']];
+const M=[['i-r66','El fin de la Ruta 66','En el muelle de Santa Mónica termina la ruta más famosa de Estados Unidos. La foto con el letrero es obligada.'],['i-wdch-1','Walt Disney Concert Hall','La obra de Frank Gehry en el centro de Los Ángeles: curvas de acero que brillan con el sol. Se puede recorrer por fuera y subir a su jardín en la terraza.'],['i-wdch-2','Por dentro, el Disney Hall','La sala de conciertos de la Filarmónica de Los Ángeles, toda en madera, con su famoso órgano. Hay visitas guiadas y audioguía.'],['i-getty','Getty Center','Arte, arquitectura blanca de Richard Meier y jardines con vista a toda la ciudad. La entrada es gratis, con hora reservada.'],['i-chinese-2','El Teatro Chino','Las huellas de las estrellas en el cemento, y afuera el Paseo de la Fama.'],['i-rodeo','Rodeo Drive','La calle más famosa de Beverly Hills, para caminar y mirar vitrinas.'],['i-sign-2','El letrero de Hollywood','En lo alto de las colinas: la foto obligada del viaje.']];
 document.getElementById('mustLA').innerHTML=M.map((s,k)=>`<div class="pc rv" style="--r:${[1.6,-1.4,-1.2,1.5,-1,1.3,-1.5][k]}deg"><img src="img/${s[0]}.jpg" alt="${s[1]}" loading="lazy"><b>${s[1]}</b><p>${s[2]}</p></div>`).join('');
 
 document.querySelectorAll('.gw').forEach(w=>{
