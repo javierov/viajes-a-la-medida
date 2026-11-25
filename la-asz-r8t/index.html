@@ -10,7 +10,7 @@
 <meta property="og:title" content="¡A zarpar! · Familia Andonie Saez">
 <meta property="og:description" content="Los Ángeles y crucero por Cabo San Lucas, Mazatlán y Puerto Vallarta · febrero 2027. Una propuesta de Catalina Rozas, viajes a la medida.">
 <meta property="og:url" content="https://viajes-a-la-medida.pages.dev/la-asz-r8t/">
-<meta property="og:image" content="https://viajes-a-la-medida.pages.dev/la-asz-r8t/img/portada-wa.jpg">
+<meta property="og:image" content="https://viajes-a-la-medida.pages.dev/la-asz-r8t/img/portada-wa-v2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_CL">
@@ -306,18 +306,75 @@ html,body{max-width:100%}
 .port .pols.one{grid-template-columns:minmax(0,1fr)!important;max-width:620px}
 .bday svg{position:static;float:right;width:clamp(96px,26vw,150px);margin:-6px -4px 6px 12px;transform:rotate(12deg)}
 #la .band h2{font-size:clamp(46px,12vw,124px)}
+/* portada crucero */
+.cover.sea{background:linear-gradient(180deg,#123f86 0%,#2a64bd 38%,#4682d8 100%);display:block;min-height:0;padding-bottom:0}
+.cover.sea .ctop{opacity:.9}
+.ctxt{padding:clamp(18px,5vw,48px) max(5vw,18px) 0;position:relative;z-index:2;max-width:1040px;margin:0 auto}
+.kick{font:700 14px/1.2 var(--t);letter-spacing:.14em;text-transform:uppercase;color:#ffd84d;margin:0 0 12px}
+.cover.sea h1{font-size:clamp(66px,19vw,170px);line-height:.85;color:#fff;text-shadow:0 6px 30px rgba(10,30,70,.35)}
+.cover.sea h1 em{color:#ffd84d}
+.cover.sea .sub{margin-top:20px;font:500 clamp(18px,2.2vw,22px)/1.35 var(--t);max-width:32ch;color:#fff}
+.cover.sea .sub b{color:#ffd84d}
+.hero{position:relative;margin-top:clamp(-40px,-3vw,-10px)}
+.hero img{width:100%;height:clamp(330px,56vw,720px);object-fit:cover;object-position:42% 62%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%)}
+.hero .cstamp{top:auto;bottom:clamp(70px,10vw,150px);right:max(4vw,12px);transform:rotate(-14deg)}
+.pstrip{display:flex;justify-content:center;gap:clamp(8px,2vw,22px);padding:0 max(4vw,12px) 26px;margin-top:clamp(-70px,-7vw,-40px);position:relative;z-index:3;background:linear-gradient(180deg,transparent 0,transparent 50%,var(--pap) 50%)}
+.sp{background:#fff;padding:6px 6px 26px;width:clamp(78px,21vw,200px);box-shadow:0 12px 26px rgba(10,30,70,.3);transform:rotate(var(--r));position:relative}
+.sp img{width:100%;aspect-ratio:1;object-fit:cover}
+.sp b{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:700 clamp(9px,1.4vw,12px)/1 var(--t);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.cover.sea+.pass{padding-top:20px}
+.cover.sea{background:linear-gradient(180deg,#0b3f8f 0%,#1667c4 45%,#2287e2 100%)}
+.hero img{object-position:30% 60%;height:clamp(300px,62vw,760px)}
+@media (min-width:900px){
+ .cover.sea{display:flex;flex-direction:column;min-height:min(100svh,900px);position:relative}
+ .cover.sea .ctop,.cover.sea .ctxt{position:relative;z-index:2}
+ .cover.sea .ctxt{margin:0;padding-left:max(5vw,18px)}
+ .hero{position:absolute;inset:0;margin:0;z-index:0}
+ .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,40,100,.55) 0%,rgba(8,40,100,.15) 38%,transparent 55%);z-index:1}
+ .hero img{height:100%;object-position:50% 70%;-webkit-mask-image:none;mask-image:none}
+ .hero .cstamp{z-index:2;bottom:auto;top:110px}
+ .pstrip{margin-top:auto;justify-content:flex-end;padding-right:max(5vw,18px);background:none;transform:translateY(40px)}
+ .cover.sea{overflow:visible}
+ .cover.sea+.pass{padding-top:70px}
+}
+@media (min-width:900px){.sp{width:150px}.pstrip{transform:translateY(56px)}}
+.cover.sea .sub{text-shadow:0 2px 12px rgba(5,25,70,.75)}
+.kick{text-shadow:0 2px 10px rgba(5,25,70,.6)}
+@media (max-width:899px){.hero .cstamp{bottom:auto;top:16%;right:max(4vw,12px)}}
+@media (max-width:899px){.hero .cstamp{top:1%;width:clamp(78px,21vw,120px)}}
+/* timbre arriba a la derecha y menos aire bajo la línea superior */
+.cover.sea .ctxt{padding-top:6px}
+.cover.sea>.cstamp{position:absolute;top:58px;right:max(5vw,18px);bottom:auto;z-index:4;width:clamp(84px,19vw,150px);transform:rotate(-14deg)}
+.cover.sea>.cstamp.slam:not(.in){transform:scale(1.7) rotate(-30deg)}
+@media (min-width:900px){.cover.sea>.cstamp{top:64px}}
+@media (max-width:899px){
+ .cover.sea>.cstamp{top:54px;width:clamp(84px,22vw,130px)}
+ .kick{max-width:calc(100% - clamp(96px,25vw,150px))}
+}
+.ctop span:last-child{white-space:nowrap}@media (max-width:400px){.ctop{font-size:11px}}
+.car .ci{padding:0;background:#fff}
+.car .ci img{max-width:none;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}
+@media (min-width:760px){.car{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.car .cb{align-self:center}}
+.car .ci{padding:18px;background:#fff;display:grid;place-items:center}
+.car .ci img{width:100%;max-width:520px;height:auto;aspect-ratio:auto;object-fit:contain}
+.car .ci{display:flex;flex-direction:column;gap:10px}
+.dims{display:flex;justify-content:center;gap:clamp(10px,4vw,28px);width:100%;border-top:1px solid #e6e0d4;padding-top:10px}
+.dims span{font:500 15px/1.2 var(--t);color:var(--ink);text-align:center;white-space:nowrap}
+.dims b{display:block;font:700 11px/1.2 var(--t);letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:3px}
 </style>
 </head>
 <body>
 
-<header class="cover">
+<header class="cover sea">
  <div class="ctop"><span>Catalina Rozas · Viajes a la medida</span><span>Feb 2027</span></div>
- <div class="fan" id="fan"></div>
- <div class="cbot">
+ <svg class="cstamp slam" id="cst" viewBox="0 0 200 200" aria-hidden="true"></svg>
+ <div class="ctxt">
+  <p class="kick">Los Ángeles + crucero por México</p>
   <h1>¡A <em>zarpar!</em></h1>
   <p class="sub">Dos días en Los Ángeles, siete en el mar y <b>cinco Andonie Saez</b>. Esta es la propuesta.</p>
-  <svg class="cstamp slam" id="cst" viewBox="0 0 200 200" aria-hidden="true"></svg>
  </div>
+ <div class="hero"><img src="img/hero-ship-2.jpg" alt="Crucero navegando frente a Cabo San Lucas" fetchpriority="high"></div>
+ <div class="pstrip" id="fan"></div>
 </header>
 
 <section class="pass">
@@ -362,9 +419,9 @@ html,body{max-width:100%}
 <section class="city" id="la" style="--c:var(--la)">
  <div class="band"><div class="wrap"><div class="no">Parada 1 · 2 noches</div><h2>Los Ángeles</h2><p class="when">6 al 8 de febrero. Aterrizan el sábado 6 a las 06:15 y ese mismo día ya están frente al Pacífico.</p></div></div>
  <div class="post"><svg class="bst slam" id="bst-la" viewBox="0 0 200 200" aria-hidden="true"></svg>
-  <figure class="card rv" style="margin:0"><img src="img/i-sm-1.jpg" alt="Muelle de Santa Mónica" loading="lazy"><figcaption class="cap"><span>Saludos desde Santa Mónica</span><i>6–8 FEB</i></figcaption></figure>
+  <figure class="card rv" style="margin:0"><img src="img/i-sm-3.jpg" alt="Muelle de Santa Mónica" loading="lazy"><figcaption class="cap"><span>Saludos desde Santa Mónica</span><i>6–8 FEB</i></figcaption></figure>
 
-  <article class="car rv"><div class="ci"><img src="img/car.jpg" alt="SUV Ford Expedition Max" loading="lazy"></div><div class="cb"><span class="tag">Su auto en LA</span><h3>SUV premium</h3><p>Ford Expedition Max o similar. La retiran en el aeropuerto y la entregan en Long Beach el día que se embarcan.</p><div class="chips"><span>7 asientos</span><span>3 maletas grandes + 4 chicas</span><span>Automática</span><span>Cámara de retroceso</span></div></div></article>
+  <article class="car rv"><div class="ci"><img src="img/car-6.jpg" alt="SUV Ford Expedition" loading="lazy"><div class="dims"><span><b>Largo</b>5,33 m</span><span><b>Ancho</b>2,40 m</span><span><b>Alto</b>1,98 m</span></div></div><div class="cb"><span class="tag">Su auto en LA</span><h3>SUV premium</h3><p>Ford Expedition Max o similar. La retiran en el aeropuerto y la entregan en Long Beach el día que se embarcan.</p><div class="chips"><span>7 asientos</span><span>3 maletas grandes + 4 chicas</span><span>Automática</span><span>Cámara de retroceso</span></div></div></article>
 
   <article class="stay rv"><div class="gw"><div class="gal" tabindex="0" aria-label="Fotos del hotel" id="galH"></div><button class="nb l" aria-label="Foto anterior"></button><button class="nb r" aria-label="Foto siguiente"></button><span class="cnt"></span></div><div class="th" aria-label="Miniaturas" id="thH"></div><div class="sb"><span class="tag">Su casa en Los Ángeles</span><h3>Sandbourne Santa Monica, Autograph Collection</h3><div class="zone">Ocean Avenue · Santa Mónica, frente al Pacífico</div><div class="chips"><span>4 estrellas</span><span>Piscina con vista al mar</span><span>Muelle de Santa Mónica a 1 km</span><span>Third Street Promenade cerca</span><span>A 25 min del Getty</span></div><div class="room">Dos habitaciones para los cinco. Sin desayuno incluido: más abajo les dejo dónde desayunar sin gluten.</div></div></article>
 
@@ -372,7 +429,7 @@ html,body{max-width:100%}
    <div class="days">
     <div class="day rv"><small>Sábado 6</small><b>Llegada y Santa Mónica</b><ul><li><i>06:15</i><span>Aterrizan en LAX y retiran la SUV.</span></li><li><i>09:00</i><span>Dejan las maletas en el hotel; la habitación se entrega en la tarde.</span></li><li><i>10:00</i><span>Brunch tranquilo y paseo por el muelle de Santa Mónica, donde termina la Ruta 66.</span></li><li><i>13:00</i><span>Third Street Promenade, a pie desde el hotel.</span></li><li><i>15:00</i><span>Check-in, ducha y siesta. Cena cerca y a dormir temprano.</span></li></ul></div>
     <div class="day rv"><small>Domingo 7</small><b>Arte, Beverly Hills y Hollywood</b><ul><li><i>10:00</i><span>Getty Center: tren a la colina, jardines, terrazas y obras como «Los lirios» de Van Gogh.</span></li><li><i>13:00</i><span>Almuerzo y paseo por Rodeo Drive, en Beverly Hills.</span></li><li><i>15:30</i><span>Hollywood Boulevard: el Teatro Chino y el Paseo de la Fama.</span></li><li><i>18:30</i><span>Vuelta a Santa Mónica para cenar y preparar las maletas.</span></li></ul></div>
-    <div class="day rv"><small>Lunes 8</small><b>¡A zarpar!</b><ul><li><i>AM</i><span>Desayuno sin apuro y check-out.</span></li><li><i>—</i><span>Devuelven la SUV en Long Beach y se embarcan.</span></li><li><i>16:00</i><span>El Voyager of the Seas zarpa rumbo a México.</span></li></ul></div>
+    <div class="day rv"><small>Lunes 8</small><b>¡A zarpar!</b><ul><li><i>AM</i><span>Desayuno sin apuro y check-out.</span></li><li><i>—</i><span>Devuelven la SUV en Long Beach y toman un Uber hasta el terminal de cruceros.</span></li><li><i>16:00</i><span>El Voyager of the Seas zarpa rumbo a México.</span></li></ul></div>
    </div>
   </div>
 
@@ -384,7 +441,7 @@ html,body{max-width:100%}
     <dt><span class="ok">100 % sin gluten</span>Modern Bread and Bagel<span>1511 Montana Ave, Santa Mónica</span></dt><dd>Bagels, pan y pastelería, todo sin gluten.</dd>
     <dt><span class="ok w">Con cuidado</span>True Food Kitchen<span>Santa Monica Place, a pasos del hotel</span></dt><dd>Carta con opciones sin gluten marcadas. No es una cocina 100 % sin gluten: avisen que es por celiaquía.</dd>
    </dl>
-   <p style="margin-top:14px">Antes de embarcar, avisamos la dieta sin gluten a la naviera.</p>
+   <p style="margin-top:14px">Antes de embarcar, avisamos a la naviera para que tengan comida sin gluten a bordo.</p>
   </div>
 
   <div class="bag rv"><b>En el bolso de mano</b><p style="margin:6px 0 0;font-size:15.5px;color:var(--mut)">Llegan a las 6 de la mañana y la habitación se entrega en la tarde:</p><ul><li>Una muda de ropa liviana (en febrero amanece fresco, 12–15 °C, y al mediodía sube a unos 20 °C).</li><li>Traje de baño, para la piscina del hotel.</li><li>Snacks sin gluten para el vuelo y la espera.</li><li>Cargadores y adaptador de enchufe tipo A/B (Estados Unidos).</li></ul></div>
@@ -394,7 +451,7 @@ html,body{max-width:100%}
 <section class="city" id="crucero" style="--c:var(--sea)">
  <div class="band"><div class="wrap"><div class="no">Parada 2 · 7 noches en el mar</div><h2>Crucero</h2><p class="when">8 al 15 de febrero a bordo del Voyager of the Seas, de Royal Caribbean. Ida y vuelta desde Los Ángeles.</p></div></div>
  <div class="post"><svg class="bst slam" id="bst-sea" viewBox="0 0 200 200" aria-hidden="true"></svg>
-  <figure class="card rv" style="margin:0"><img src="img/i-ship.jpg" alt="Voyager of the Seas" loading="lazy"><figcaption class="cap"><span>Saludos desde el Voyager</span><i>8–15 FEB</i></figcaption></figure>
+  <figure class="card rv" style="margin:0"><img src="img/i-ship-2.jpg" alt="Voyager of the Seas" loading="lazy" style="aspect-ratio:3/2"><figcaption class="cap"><span>Saludos desde el Voyager</span><i>8–15 FEB</i></figcaption></figure>
 
   <article class="stay rv"><div class="gw"><div class="gal" tabindex="0" aria-label="Fotos de los camarotes" id="galC"></div><button class="nb l" aria-label="Foto anterior"></button><button class="nb r" aria-label="Foto siguiente"></button><span class="cnt"></span></div><div class="th" aria-label="Miniaturas" id="thC"></div><div class="sb"><span class="tag">Su casa en el mar</span><h3>Dos camarotes con ventana</h3><div class="zone">Voyager of the Seas · Royal Caribbean</div><div class="chips"><span>Vista al mar garantizada</span><span>Cama Royal King (se separa en dos)</span><span>Triple de 19,6 m² con sofá cama</span><span>Doble de 14,9 m²</span><span>Limpieza diaria</span></div><div class="room">Un camarote doble y uno triple más espacioso, en la cubierta 8. Los dos con vista al océano.</div></div></article>
 
@@ -417,7 +474,7 @@ html,body{max-width:100%}
 
   <div class="port" id="vallarta" style="--pc:var(--pv)"><div class="ph rv"><h3>Puerto Vallarta</h3><span>Viernes 12 · 08:00 a 18:00</span></div><div class="pols"><div class="pc rv" style="--r:-1.6deg"><img src="img/i-pv-1.jpg" alt="Los Arcos del Malecón" loading="lazy"><b>Los Arcos del Malecón</b><p>El símbolo de Vallarta, en un malecón lleno de esculturas frente a la bahía de Banderas.</p></div><div class="pc rv" style="--r:1.4deg"><img src="img/i-pv-2.jpg" alt="Atardecer en Puerto Vallarta" loading="lazy"><b>La bahía de Banderas</b><p>Una de las bahías más grandes de México. Para despedirse desde la cubierta del barco.</p></div></div></div>
 
-  <div class="bday rv" id="cumple"><svg viewBox="0 0 200 200" aria-hidden="true" id="bst-bd"></svg><small>Domingo 14 de febrero · en alta mar</small><h3>¡Laura cumple 17!</h3><p>Un cumpleaños navegando de vuelta a California. Si quieren, le pedimos a la naviera una sorpresa para ese día.</p></div>
+  <div class="bday rv" id="cumple"><svg viewBox="0 0 200 200" aria-hidden="true" id="bst-bd"></svg><small>Domingo 14 de febrero · en alta mar</small><h3>¡Feliz cumple, Laura!</h3><p>Un cumpleaños navegando de vuelta a California. Si quieren, le pedimos a la naviera una sorpresa para ese día.</p></div>
 
   <div class="home rv">Lunes 15: el barco llega a Los Ángeles a las <b>07:00</b>. Vuelo directo a Santiago a las <b>13:55</b>; aterrizan el martes 16 a las 05:35.</div>
  </div>
@@ -439,6 +496,7 @@ html,body{max-width:100%}
    <div><i>✓</i><span><b>Seguro de viaje Interassist</b><em>Cobertura hasta USD 60.000.</em></span></div>
    <div><i>✓</i><span><b>Asesoría y planificación</b><em>Opciones de itinerario, información para celíacos y recomendaciones en la ciudad.</em></span></div>
   </div>
+  <p class="note" style="margin-top:14px;opacity:.9">No incluye: el Uber de Long Beach al terminal de cruceros (lunes 8) ni el traslado del puerto al aeropuerto (lunes 15). Si quieren, les cotizo un transfer.</p>
   <div class="fx rv">
    <div class="fxh"><small>Tipo de cambio</small><b>Válido al 25 de noviembre de 2026</b></div>
    <div class="fxr"><span>Contado</span><strong>$1.023</strong><em>≈ $7.085.298</em></div>
@@ -452,14 +510,14 @@ html,body{max-width:100%}
  <div class="wrap">
   <h2 class="rv">Viajar conmigo</h2>
   <div class="stk">
-   <div class="rv" style="--r:-1.5deg;background:var(--maz)"><b>Pensado para los cinco</b><p>Arte para la Carla, Hollywood para los hijos y comida segura sin gluten en cada parada.</p></div>
+   <div class="rv" style="--r:-1.5deg;background:var(--maz)"><b>Pensado para los cinco</b><p>Arte para la Carla, Hollywood para los hijos y comida sin gluten en cada parada.</p></div>
    <div class="rv" style="--r:1deg;background:var(--pv)"><b>Una ruta que calza</b><p>Vuelo, auto, hotel y barco encadenados como un solo viaje, sin horas perdidas.</p></div>
    <div class="rv" style="--r:-.8deg;background:var(--sea)"><b>Su asesora por WhatsApp</b><p>Antes y durante el viaje, si algo cambia o surge una duda, me escriben directo a mí.</p></div>
   </div>
  </div>
 </section>
 
-<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-la-30s.mp4" poster="img/poster-la.jpg" muted playsinline loop preload="metadata" controls></video><b>California y México en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
+<section class="vid"><div class="wrap"><h2 class="rv">¡Dale play!</h2><div class="vbox rv"><video id="vid" src="img/video-la-30s-v3.mp4" poster="img/poster-la-v2.jpg" muted playsinline loop preload="metadata" controls></video><b>California y México en 30 segundos</b><button class="snd" id="snd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>Con música</button></div></div></section>
 
 
 <section class="end">
@@ -470,7 +528,7 @@ html,body{max-width:100%}
   <div class="sig" id="sig"><b>Catalina Rozas</b><span>Asesora de viajes a la medida · +56 9 7376 4358</span></div>
  </div>
 </section>
-<footer class="foot">Fotos del hotel: del alojamiento. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Grauman%27s_Chinese_Theatre,_by_Carol_Highsmith_fixed_%26_straightened.jpg">Teatro Chino</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg">Letrero de Hollywood</a> (Thomas Wolf, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_Costa_Maya_2023.jpg">Voyager of the Seas</a> (Larry D. Moore, CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
+<footer class="foot">Fotos del hotel: del alojamiento. SUV: imagen referencial del modelo. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Grauman%27s_Chinese_Theatre,_by_Carol_Highsmith_fixed_%26_straightened.jpg">Teatro Chino</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg">Letrero de Hollywood</a> (Thomas Wolf, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_at_Port_of_Kobe.jpg">Voyager of the Seas</a> (0-0t, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Santa_Monica_Ferris_Wheel.jpg">Muelle de Santa Mónica</a> (Dwaynewilbert, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
 
 <script>
 {
@@ -478,19 +536,15 @@ const col=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim
 let sid=0;
 const stamp=(top,mid,bot,color,bg)=>{const k='p'+(sid++);return `${bg?`<circle cx="100" cy="100" r="97" fill="${bg}"/>`:''}<circle cx="100" cy="100" r="93" fill="none" stroke="${color}" stroke-width="5"/><circle cx="100" cy="100" r="65" fill="none" stroke="${color}" stroke-width="2"/><circle cx="100" cy="100" r="54" fill="${color}" opacity=".12"/><defs><path id="${k}a" d="M27 100a73 73 0 0 1 146 0"/><path id="${k}b" d="M16 100a84 84 0 0 0 168 0"/></defs><text font-family="DM,sans-serif" font-weight="700" font-size="${top.length>15?13:15}" letter-spacing="${top.length>15?2:3}" fill="${color}" text-anchor="middle"><textPath href="#${k}a" startOffset="50%">${top}</textPath></text><text font-family="DM,sans-serif" font-weight="700" font-size="12" letter-spacing="3" fill="${color}" text-anchor="middle"><textPath href="#${k}b" startOffset="50%">${bot}</textPath></text><text x="100" y="${mid.length>6?107:114}" font-family="AB,sans-serif" font-size="${mid.length>7?21:mid.length>6?24:38}" fill="${color}" text-anchor="middle">${mid}</text>`};
 
-document.getElementById('cst').innerHTML=stamp('FAMILIA ANDONIE SAEZ','2027','★ CALIFORNIA ★','#f2a541');
+document.getElementById('cst').innerHTML=stamp('FAMILIA ANDONIE SAEZ','2027','★ CALIFORNIA ★','#ffd84d','rgba(8,40,100,.45)');
 document.getElementById('bst-la').innerHTML=stamp('LOS ÁNGELES','6–8 FEB','SANTA MÓNICA',col('--la'),'#fbf6ee');
 document.getElementById('bst-sea').innerHTML=stamp('VOYAGER OF THE SEAS','7 NOCHES','8–15 FEB',col('--sea'),'#fbf6ee');
-document.getElementById('bst-bd').innerHTML=stamp('¡FELIZ CUMPLE!','17','LAURA · 14 FEB','#ffffff');
+document.getElementById('bst-bd').innerHTML=stamp('¡FELIZ CUMPLE!','LAURA','14 FEB · EN ALTA MAR','#ffffff');
 
-const F=[['la','Santa Mónica'],['hollywood','Hollywood'],['ship','El barco'],['cabo','Cabo'],['vallarta','Vallarta']];
-const pos=[['-14deg','-58%','6%'],['-5deg','-22%','-4%'],['3deg','0%','0%'],['9deg','24%','-3%'],['16deg','58%','7%']];
-const fan=document.getElementById('fan');
-fan.innerHTML=F.map((c,i)=>`<div class="pol" style="--r:${pos[i][0]};--x:${pos[i][1]};--y:${pos[i][2]};z-index:${i===2?5:5-Math.abs(i-2)}"><img src="img/c-${c[0]}.jpg" alt="${c[1]}"><b>${c[1]}</b></div>`).join('');
-const pols=[...fan.children];
-pols.forEach(p=>p.addEventListener('click',()=>{pols.forEach(q=>q.style.zIndex=q===p?9:'');}));
+const F=[['la','Santa Mónica'],['hollywood','Hollywood'],['cabo','Cabo'],['vallarta','Vallarta']];
+document.getElementById('fan').innerHTML=F.map((c,i)=>`<div class="sp" style="--r:${[-6,4,-3,6][i]}deg"><img src="img/c-${c[0]}.jpg" alt="${c[1]}"><b>${c[1]}</b></div>`).join('');
 
-const S=[['la','LOS ÁNGELES','6–8 FEB','2 NOCHES','--la','Los Ángeles'],['cabo','CABO SAN LUCAS','10 FEB','MIÉRCOLES','--cab','Cabo San Lucas'],['mazatlan','MAZATLÁN','11 FEB','JUEVES','--maz','Mazatlán'],['vallarta','PUERTO VALLARTA','12 FEB','VIERNES','--pv','Puerto Vallarta'],['cumple','¡FELIZ CUMPLE!','LAURA','14 FEB · 17 AÑOS','--bd','Cumple de Laura']];
+const S=[['la','LOS ÁNGELES','6–8 FEB','2 NOCHES','--la','Los Ángeles'],['cabo','CABO SAN LUCAS','10 FEB','MIÉRCOLES','--cab','Cabo San Lucas'],['mazatlan','MAZATLÁN','11 FEB','JUEVES','--maz','Mazatlán'],['vallarta','PUERTO VALLARTA','12 FEB','VIERNES','--pv','Puerto Vallarta'],['cumple','¡FELIZ CUMPLE!','LAURA','14 FEB · EN ALTA MAR','--bd','Cumple de Laura']];
 document.getElementById('stamps').innerHTML=S.map((c,i)=>`<a href="#${c[0]}" style="--r:${[-8,6,-4,9,-6][i]}deg"><svg viewBox="0 0 200 200" aria-hidden="true">${stamp(c[1],c[2],c[3],col(c[4]))}</svg><small>${c[5]}</small></a>`).join('');
 
 const stp=document.getElementById('stamps'),sl=document.getElementById('sl'),sr=document.getElementById('sr'),sw=stp.parentNode;
