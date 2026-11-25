@@ -390,6 +390,20 @@ html,body{max-width:100%}
 }
 @media (max-width:899px){.pstrip{margin-top:-6px}}
 @media (min-width:760px){#mustLA>.pc:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 11px);justify-self:center}}
+.mi{margin-top:16px;background:#fff;color:var(--ink);border-top:8px solid #ffd84d}
+.mh{padding:18px 20px 10px}
+.mh .tag{background:#ffd84d;color:var(--ink)}
+.mh h3{font-size:clamp(22px,6vw,28px);margin:12px 0 6px}
+.mh p{margin:0;color:var(--mut);font-size:15.5px}
+.mr{display:flex;justify-content:space-between;align-items:baseline;gap:6px 14px;flex-wrap:wrap;padding:11px 20px;border-top:1px solid #eee5d6;font-size:15px}
+.mr span{color:var(--mut)}
+.mr b{white-space:nowrap}
+.mr.t{background:var(--pap)}
+.mr.t span{color:var(--ink);font-weight:700}
+.mr.t b{font:400 18px/1.2 var(--h)}
+.mn{margin:0;padding:12px 20px 16px;font-size:14.5px;color:var(--mut);border-top:1px solid #eee5d6}
+.note+.mi{margin-top:22px}
+@media (max-width:520px){.mr{flex-direction:column;align-items:flex-start;gap:2px}}
 </style>
 </head>
 <body>
@@ -410,7 +424,7 @@ html,body{max-width:100%}
  <div class="wrap">
   <div class="ticket rv">
    <div class="tk">
-    <span class="tag">Pase de abordar · LATAM directo</span>
+    <span class="tag">Pase de abordar · LATAM directo · con millas</span>
     <div class="big"><span>SCL</span><svg viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true"><path d="M2 15H108" stroke="#1f1d36" stroke-width="2.5" stroke-dasharray="6 6"/><path d="M104 7l12 8-12 8z" fill="#1f1d36"/></svg><span>LAX</span></div>
     <div class="row">
      <div><small>Pasajeros</small><strong>Familia Andonie Saez · 5</strong></div>
@@ -514,24 +528,31 @@ html,body{max-width:100%}
  <div class="wrap">
   <h2 class="rv">La cuenta, sin sorpresas</h2>
   <div class="pt rv">
-   <div class="a"><small>Todo el paquete · 5 viajeros</small><div class="n"><span>USD</span>6.926</div><p>Vuelos, auto, hotel, crucero y seguro: 9 noches de viaje.</p></div>
+   <div class="a"><small>Todo el paquete · 5 viajeros</small><div class="n"><span>USD</span>6.926</div><p>Auto, hotel, crucero, seguro y asesoría. No incluye los pasajes aéreos: van cotizados aparte, en el anexo.</p></div>
    <div class="b"><span>Ticket del viaje</span><span>Precio total del paquete</span></div>
   </div>
   <div class="inc rv">
-   <div><i>✓</i><span><b>Vuelos directos LATAM</b><em>Santiago – Los Ángeles ida y vuelta, tarifa basic comprada con millas. Maletas como beneficio del pasajero.</em></span></div>
-   <div><i>✓</i><span><b>SUV premium</b><em>Ford Expedition Max o similar. Retiro en el aeropuerto, entrega en Long Beach.</em></span></div>
+      <div><i>✓</i><span><b>SUV premium</b><em>Ford Expedition Max o similar. Retiro en el aeropuerto, entrega en Long Beach.</em></span></div>
    <div><i>✓</i><span><b>2 noches en Santa Mónica</b><em>Sandbourne Santa Monica, Autograph Collection. Dos habitaciones, sin desayuno.</em></span></div>
    <div><i>✓</i><span><b>Crucero de 7 noches</b><em>Voyager of the Seas: camarote doble y camarote triple, ambos con ventana.</em></span></div>
    <div><i>✓</i><span><b>Seguro de viaje Interassist</b><em>Cobertura hasta USD 60.000.</em></span></div>
-   <div><i>✓</i><span><b>Asesoría y planificación</b><em>Opciones de itinerario, información para celíacos y recomendaciones en la ciudad.</em></span></div>
+   <div><i>✓</i><span><b>Asesoría de viaje</b><em>Compra de los vuelos con millas, itinerario, comida sin gluten y recomendaciones en cada parada.</em></span></div>
   </div>
-  <p class="note" style="margin-top:14px;opacity:.9">No incluye: el Uber de Long Beach al terminal de cruceros (lunes 8) ni el traslado del puerto al aeropuerto (lunes 15). Si quieren, les cotizo un transfer.</p>
+  <p class="note" style="margin-top:14px;opacity:.9">No incluye: los pasajes aéreos (ver anexo), el Uber de Long Beach al terminal de cruceros (lunes 8) ni el traslado del puerto al aeropuerto (lunes 15). Si quieren, les cotizo un transfer.</p>
   <div class="fx rv">
    <div class="fxh"><small>Tipo de cambio</small><b>Válido al 25 de noviembre de 2026</b></div>
    <div class="fxr"><span>Contado</span><strong>$1.023</strong><em>≈ $7.085.298</em></div>
    <div class="fxr"><span>Tarjetas</span><strong>$1.037</strong><em>≈ $7.182.262</em></div>
   </div>
   <p class="note">Valores en dólares por todo el paquete; el equivalente en pesos chilenos es referencial, según el tipo de cambio del día. Cotización válida al 25 de noviembre de 2026. Valores sujetos a cambio y a disponibilidad.</p>
+  <div class="mi rv">
+   <div class="mh"><span class="tag">Anexo · cotización de pasajes</span><h3>Los vuelos, con millas LATAM Pass</h3><p>Vuelos directos Santiago – Los Ángeles, tarifa Light. No están incluidos en el paquete: los compran ustedes con sus millas, y yo los asesoro paso a paso para pagar lo menos posible.</p></div>
+   <div class="mr"><span>Ida · vie 5 feb · 23:55</span><b>24.504 millas + $44.463</b></div>
+   <div class="mr"><span>Vuelta · lun 15 feb · 13:55</span><b>68.342 millas + $5.712</b></div>
+   <div class="mr t"><span>Por persona, ida y vuelta</span><b>92.846 millas + $50.175</b></div>
+   <div class="mr t"><span>Los cinco</span><b>464.230 millas + $250.875</b></div>
+   <p class="mn">Con sus 500.000 millas alcanza para los cinco pasajes y les sobran unas 35.770. La ida está en promoción hoy, 25 de noviembre: el valor en millas puede subir si esperan.</p>
+  </div>
  </div>
 </section>
 
@@ -557,7 +578,7 @@ html,body{max-width:100%}
   <div class="sig" id="sig"><b>Catalina Rozas</b><span>Asesora de viajes a la medida · +56 9 7376 4358</span></div>
  </div>
 </section>
-<footer class="foot">Fotos del hotel: del alojamiento. SUV: imagen referencial del modelo. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Grauman%27s_Chinese_Theatre,_by_Carol_Highsmith_fixed_%26_straightened.jpg">Teatro Chino</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg">Letrero de Hollywood</a> (Thomas Wolf, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_at_Port_of_Kobe.jpg">Voyager of the Seas</a> (0-0t, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
+<footer class="foot">Fotos del hotel: del alojamiento. SUV: imagen referencial del modelo. Fotos de los camarotes: Royal Caribbean. Lugares: Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Getty_Center_from_Central_Garden_on_2009-02-08.png">Getty Center</a> (Robert F. Tobler, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg">Walt Disney Concert Hall</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Glatter-G%C3%B6tz_Organ_at_the_Walt_Disney_Concert_Hall_-_Los_Angeles.jpg">interior del Disney Hall</a> (cultivar413, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Grauman%27s_Chinese_Theatre,_by_Carol_Highsmith_fixed_%26_straightened.jpg">Teatro Chino</a> (Carol M. Highsmith, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg">Letrero de Hollywood</a> (Thomas Wolf, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg">Rodeo Drive</a> (DXR, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Voyager_of_the_Seas_at_Port_of_Kobe.jpg">Voyager of the Seas</a> (0-0t, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:El_Arco,_Cabo_San_Lucas,_Baja_California_Sur_(16638939645).jpg">El Arco</a> (Comisión Mexicana de Filmaciones, CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Mazatl%C3%A1n_Sinaloa_March_2021_-_Beautiful_Balconies.jpg">Mazatlán</a> (Dennis Sylvester Hurd, dominio público), <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Mazatl%C3%A1n_02.jpg">Catedral de Mazatlán</a> (Trevor Cameron, CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Los_Arcos_del_Malecon_de_Puerto_Vallarta.jpg">Los Arcos</a> (Mtmontenegro, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Puerto_Vallarta,_Mexico_-_March_2023_-_016.jpg">Bahía de Banderas</a> (Another Believer, CC BY-SA 4.0).</footer>
 
 <script>
 {
@@ -584,12 +605,12 @@ stp.addEventListener('scroll',stu,{passive:true});addEventListener('resize',stu)
 
 const arrow=d=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d?'M9 4l8 8-8 8':'M15 4l-8 8 8 8'}" fill="none" stroke="currentColor" stroke-width="3"/></svg>`;
 const fill=(g,t,p)=>{g.innerHTML=p.map(x=>`<figure class="gf"><img src="img/${x[0]}.jpg" alt="${x[1]}" loading="lazy"><figcaption>${x[1]}</figcaption></figure>`).join('');t.innerHTML=p.map((x,i)=>`<button type="button" aria-label="Ver ${x[1]}"${i?'':' class="on"'}><img src="img/${x[0]}.jpg" alt="" loading="lazy"></button>`).join('')};
-fill(document.getElementById('galH'),document.getElementById('thH'),[['h-1','Fachada entre palmeras'],['h-2','Piscina frente al mar'],['h-3','Habitación'],['h-4','Habitación con dos camas'],['h-5','Lobby'],['h-6','Restaurante']]);
+fill(document.getElementById('galH'),document.getElementById('thH'),[['h-1','Fachada entre palmeras'],['h-2','Piscina frente al mar'],['h-7','Habitación con cama king'],['h-8','Habitación con dos camas'],['h-4','Habitación con dos camas, otra vista'],['h-5','Lobby'],['h-6','Restaurante']]);
 fill(document.getElementById('galC'),document.getElementById('thC'),[['c-1','Camarote doble con vista al mar'],['c-2','Camarote triple, espacioso con vista al mar']]);
 document.querySelectorAll('.nb.l').forEach(b=>b.innerHTML=arrow(0));document.querySelectorAll('.nb.r').forEach(b=>b.innerHTML=arrow(1));
 
-const M=[['i-r66','El fin de la Ruta 66','En el muelle de Santa Mónica termina la ruta más famosa de Estados Unidos. La foto con el letrero es obligada.'],['i-getty','Getty Center','Arte, arquitectura blanca de Richard Meier y jardines con vista a toda la ciudad. La entrada es gratis, con hora reservada.'],['i-chinese','El Teatro Chino','Las huellas de las estrellas en el cemento, y afuera el Paseo de la Fama.'],['i-rodeo','Rodeo Drive','La calle más famosa de Beverly Hills, para caminar y mirar vitrinas.'],['i-sign','El letrero de Hollywood','En lo alto de las colinas: la foto obligada del viaje.']];
-document.getElementById('mustLA').innerHTML=M.map((s,k)=>`<div class="pc rv" style="--r:${[1.6,-1.4,-1.2,1.5,-1][k]}deg"><img src="img/${s[0]}.jpg" alt="${s[1]}" loading="lazy"><b>${s[1]}</b><p>${s[2]}</p></div>`).join('');
+const M=[['i-r66','El fin de la Ruta 66','En el muelle de Santa Mónica termina la ruta más famosa de Estados Unidos. La foto con el letrero es obligada.'],['i-wdch-1','Walt Disney Concert Hall','La obra de Frank Gehry en el centro de Los Ángeles: curvas de acero que brillan con el sol. Se puede recorrer por fuera y subir a su jardín en la terraza.'],['i-wdch-2','Por dentro, el Disney Hall','La sala de conciertos de la Filarmónica de Los Ángeles, toda en madera, con su famoso órgano. Hay visitas guiadas y audioguía.'],['i-getty','Getty Center','Arte, arquitectura blanca de Richard Meier y jardines con vista a toda la ciudad. La entrada es gratis, con hora reservada.'],['i-chinese','El Teatro Chino','Las huellas de las estrellas en el cemento, y afuera el Paseo de la Fama.'],['i-rodeo','Rodeo Drive','La calle más famosa de Beverly Hills, para caminar y mirar vitrinas.'],['i-sign','El letrero de Hollywood','En lo alto de las colinas: la foto obligada del viaje.']];
+document.getElementById('mustLA').innerHTML=M.map((s,k)=>`<div class="pc rv" style="--r:${[1.6,-1.4,-1.2,1.5,-1,1.3,-1.5][k]}deg"><img src="img/${s[0]}.jpg" alt="${s[1]}" loading="lazy"><b>${s[1]}</b><p>${s[2]}</p></div>`).join('');
 
 document.querySelectorAll('.gw').forEach(w=>{
  const g=w.querySelector('.gal'),n=g.children.length,ct=w.querySelector('.cnt');ct.textContent='1 / '+n;
